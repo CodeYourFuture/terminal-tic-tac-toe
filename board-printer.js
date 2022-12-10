@@ -6,6 +6,7 @@
             ['_', 'X', '_'],
             ['O', 'O', 'X']
         ];
+        
     We should output something like this (feel free to be creative):
           X  |     |     
         =================
