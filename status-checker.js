@@ -54,11 +54,7 @@ function checkIfPlayerWon(board, player) {
         }
     }
 
-    if(checkDiagonal(board, player)) {
-        return true;
-    }
-
-    return false;
+    return checkDiagonal(board, player);
 }
 
 export function isGameOver(board) {
