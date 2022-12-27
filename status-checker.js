@@ -18,7 +18,18 @@ import { checkIfNoMovesLeft } from './board-printer.js';
     Otherwise, return false
 */
 function checkRow(board, player, rowNumber) {
+    return board[rowNumber].every(element => element===player)
 }
+// TESTS FOR checkRow
+// let boardTest1 = [
+//     ['_', '_', '_'],
+//     ['_', '_', '_'],
+//     ['O', 'O', 'O']
+// ];
+// console.log(checkRow(boardTest1, "O", 2));
+// true
+// console.log(checkRow(boardTest1, "O", 1));
+// false
 
 /*
     Given 3 parameters:
@@ -29,8 +40,23 @@ function checkRow(board, player, rowNumber) {
     Otherwise, return false
 */
 function checkColumn(board, player, columnNumber) {
+    for (let row of board){
+        if(row[columnNumber]!==player){
+            return false
+        }
+    }
+    return true
 }
-
+// TESTS FOR checkColumn
+// let boardTest2 = [
+//     ['_', '_', 'O'],
+//     ['_', '_', 'O'],
+//     ['_', '_', 'O']
+// ];
+// console.log(checkColumn(boardTest2, "O", 2));
+// true
+// console.log(checkColumn(boardTest2, "O", 1));
+// false
 /*
     Given 2 parameters:
         - a tic-tac-toe board (array of arrays)
@@ -40,8 +66,41 @@ function checkColumn(board, player, columnNumber) {
 */
 function checkDiagonal(board, player) {
     // It may be easier to use an if statement than a loop here
+    if (
+        board[0][0] === player &&
+        board[1][1] === player &&
+        board[2][2] === player ||
+        board[0][2] === player &&
+        board[1][1] === player &&
+        board[2][0] === player
+    ) {
+        return true;
+    } else {
+        return false;
+    }
 }
-
+// TESTS FOR checkColumn
+// let boardTest3 = [
+//     ['O', '_', '_'],
+//     ['_', 'O', '_'],
+//     ['_', '_', 'O']
+// ];
+// let boardTest4 = [
+//     ['_', '_', 'O'],
+//     ['_', 'O', '_'],
+//     ['O', '_', '_']
+// ];
+// let boardTest5 = [
+//     ['O', '_', 'O'],
+//     ['_', '_', '_'],
+//     ['O', '_', 'O']
+// ];
+// console.log(checkDiagonal(boardTest3, "O"));
+// true
+// console.log(checkDiagonal(boardTest4, "O"));
+// true
+// console.log(checkDiagonal(boardTest5, "O"));
+// false
 
 /*
     There is no need to change any code below this line.
