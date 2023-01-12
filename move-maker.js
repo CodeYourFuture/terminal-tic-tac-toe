@@ -16,8 +16,15 @@
         ];
 */
 function validateMove(move, board) {
-    // Implement this at the end if you have time, otherwise you can help your teammates!
+  let regex = /[1-3]/g;
+  if (
+    move.match(regex).length === 2 &&
+    move[1] === "," &&
+    board[move[0] - 1][move[2] - 1] === "_"
+  )
     return true;
+  console.log("Try again...");
+  return false;
 }
 
 /*
@@ -32,5 +39,9 @@ function validateMove(move, board) {
             - Return true
 */
 export function makeMove(board, move, player) {
-    return false;
+  if (validateMove(move, board)) {
+    board[move[0] - 1][move[2] - 1] = player;
+    return true;
+  }
+  return false;
 }
