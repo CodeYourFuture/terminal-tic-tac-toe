@@ -16,7 +16,30 @@
     Test your function by calling it with an example tic-tac-toe board.
 */
 export function printBoard(board) {
+    for (let row of  board) {
+
+    
+
+        const colOne = row[0]
+        const colTwo = row[1]
+        const colThree = row[2]
+       
+        console.log(` ${colOne.replace("_"," ")}  |  ${colTwo.replace("_"," ")}  |  ${colThree.replace("_"," ")} `)
+        console.log("===============")
+        
+    }
+
 }
+
+let board = [
+    ['X', '_', '_'],
+    ['_', 'X', '_'],
+    ['O', 'O', 'X']
+];
+
+printBoard(board)
+
+
 
 /*
     Given a tic-tac-toe board (an array of arrays),
