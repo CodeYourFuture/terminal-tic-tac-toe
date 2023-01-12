@@ -15,7 +15,7 @@
         =================
     Test your function by calling it with an example tic-tac-toe board.
 */
-
+//It needs to be checked
 let board = [
   ["X", "0", "X"],
   ["X", "0", "X"],
