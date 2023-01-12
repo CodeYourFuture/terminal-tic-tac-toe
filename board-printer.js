@@ -15,7 +15,12 @@
         =================
     Test your function by calling it with an example tic-tac-toe board.
 */
-export function printBoard(board) {}
+export function printBoard(board) {
+  for (let row of board) {
+    console.log(row.join("  |  ").replaceAll("_", " "));
+    console.log("=================");
+  }
+}
 
 /*
     Given a tic-tac-toe board (an array of arrays),
