@@ -16,8 +16,7 @@
         ];
 */
 function validateMove(move, board) {
-    // Implement this at the end if you have time, otherwise you can help your teammates!
-    return true;
+  // Implement this at the end if you have time, otherwise you can help your teammates!
 }
 
 /*
@@ -31,6 +30,4 @@ function validateMove(move, board) {
             - Update the board with the player's value ('X' or 'O') in the correct position
             - Return true
 */
-export function makeMove(board, move, player) {
-    return false;
-}
+export function makeMove(board, move, player) {}
