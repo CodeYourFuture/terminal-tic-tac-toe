@@ -18,8 +18,15 @@ import { checkIfNoMovesLeft } from './board-printer.js';
     Otherwise, return false
 */
 function checkRow(board, player, rowNumber) {
+      
+    for (let rowNumber of board) {
+        if ((board[rowNumber] === 0 && board[rowNumber] === player)
+         && (board[rowNumber] === 1 && board[rowNumber] === player)
+         && (board[rowNumber] === 2 && board[rowNumber] === player)) {
+            return true;
+         } return false;
 }
-
+}
 /*
     Given 3 parameters:
         - a tic-tac-toe board (array of arrays)
@@ -29,8 +36,14 @@ function checkRow(board, player, rowNumber) {
     Otherwise, return false
 */
 function checkColumn(board, player, columnNumber) {
+    for (let columnNumber of board) {
+        if ((board[columnNumber] === 0 && board[columnNumber] === player)
+         && (board[columnNumber] === 1 && board[columnNumber] === player)
+         && (board[columnNumber] === 2 && board[columnNumber] === player)) {
+            return true;
+         } return false;
 }
-
+}
 /*
     Given 2 parameters:
         - a tic-tac-toe board (array of arrays)
@@ -40,8 +53,19 @@ function checkColumn(board, player, columnNumber) {
 */
 function checkDiagonal(board, player) {
     // It may be easier to use an if statement than a loop here
+    if (
+        board[0][0] === player &&
+        board[1][1] === player &&
+        board[2][2] === player ||
+        board[0][2] === player &&
+        board[1][1] === player &&
+        board[2][0] === player
+    ) {
+        return true;
+    } else {
+        return false;
+    }
 }
-
 
 /*
     There is no need to change any code below this line.
