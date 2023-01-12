@@ -16,9 +16,29 @@
         ];
 */
 function validateMove(move, board) {
-    // Implement this at the end if you have time, otherwise you can help your teammates!
+  // Implement this at the end if you have time, otherwise you can help your teammates!
+  if (move[0] !== "1" || move[0] !== "2" || move[0] !== "3") {
+    console.log("Try again...");
+    return false;
+  } else if (move[2] !== "1" || move[2] !== "2" || move[2] !== "3") {
+    console.log("Try again...");
+    return false;
+  } else if (move[1] !== ",") {
+    console.log("Try again...");
+    return false;
+  }
+  return true;
+}
+// clean version validateMove
+/*
+function validateMove(move, board){
+    if(move.length !=3 || move[0]<'1' || move[0]>'3' || move[2]<'1' || move[2]>'3' || move[1] !==',' || board [move[0]-1][move[2]-1] !=='_'){
+    console.log('Try again...');
+    return false;
+    }
     return true;
 }
+
 
 /*
     Given 3 parameters:
@@ -32,5 +52,5 @@ function validateMove(move, board) {
             - Return true
 */
 export function makeMove(board, move, player) {
-    return false;
+  return false;
 }
