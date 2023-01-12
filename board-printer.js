@@ -16,7 +16,15 @@
     Test your function by calling it with an example tic-tac-toe board.
 */
 export function printBoard(board) {
+  for (let row of board) {
+    console.log(
+      `  ${row[0] !== "_" ? row[0] : " "}  |  ${
+        row[1] !== "_" ? row[1] : " "
+      }  |  ${row[2] !== "_" ? row[2] : " "}\n=================`
+    );
+  }
 }
+printBoard();
 
 /*
     Given a tic-tac-toe board (an array of arrays),
@@ -24,4 +32,12 @@ export function printBoard(board) {
         - return false if there are still moves that can be made
 */
 export function checkIfNoMovesLeft(board) {
+  for (let i = 0; i < board.length; i++) {
+    for (let j = 0; j < board[i].length; j++) {
+      if (board[i][j] === "_") {
+        return false;
+      }
+    }
+  }
+  return true;
 }
