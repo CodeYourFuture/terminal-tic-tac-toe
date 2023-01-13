@@ -9,14 +9,25 @@
         - you can output 'Try again...'
         - and then return false
     Testing your function by calling it with some values. An example board is:
+  
         let board = [
             ['X', '_', '_'],
             ['_', 'X', '_'],
             ['O', 'O', 'X']
         ];
 */
+let board1 = [
+  ["X", "_", "_"],
+  ["_", "X", "_"],
+  ["O", "O", "X"],
+];
+
 function validateMove(move, board) {
+   
+
+
     // Implement this at the end if you have time, otherwise you can help your teammates!
+   
     return true;
 }
 
