@@ -9,6 +9,7 @@
         - you can output 'Try again...'
         - and then return false
     Testing your function by calling it with some values. An example board is:
+  
         let board = [
             ['X', '_', '_'],
             ['_', 'X', '_'],
@@ -17,6 +18,11 @@
 */
 function validateMove(move, board) {
     // Implement this at the end if you have time, otherwise you can help your teammates!
+    let board = [
+      ["X", "_", "_"],
+      ["_", "X", "_"],
+      ["O", "O", "X"],
+    ];
     return true;
 }
 
