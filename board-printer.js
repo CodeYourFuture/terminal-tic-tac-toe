@@ -40,11 +40,27 @@ board[2][2] = "X";
 
 console.log(board);
 
-export function printBoard(board) {}
+export function printBoard(board) {
+  for(let i = 0; i < board.length; i++){
+    console.log(board[i].join(" | "));
+    if(i !== board.length - 1){
+      console.log("=================");
+    }
+  }
+}
 
 /*
     Given a tic-tac-toe board (an array of arrays),
         - return true if there are no moves left to make (there are no more '_' values)
         - return false if there are still moves that can be made
 */
-export function checkIfNoMovesLeft(board) {}
+export function checkIfNoMovesLeft(board) {
+  for(let i = 0; i < board.length; i++){
+    for(let j = 0; j < board[i].length; j++){
+      if(board[i][j] === '_'){
+        return false;
+      }
+    }
+  }
+  return true;
+}
