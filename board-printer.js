@@ -16,7 +16,14 @@
         =================
     Test your function by calling it with an example tic-tac-toe board.
 */
+let board = [
+            ['X', '_', '_'],
+            ['_', 'X', '_'],
+            ['O', 'O', 'X']
+        ];
+
 export function printBoard(board) {
+
     for (let i = 0; i < board.length; i++) {
       console.log(board[i].join(" | "));
       if (i !== board.length - 1) {
@@ -24,6 +31,7 @@ export function printBoard(board) {
       }
     }
 }
+printBoard(board);
 
 /*
     Given a tic-tac-toe board (an array of arrays),
