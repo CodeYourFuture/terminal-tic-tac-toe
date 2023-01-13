@@ -16,13 +16,18 @@
             ['O', 'O', 'X']
         ];
 */
+let board1 = [
+  ["X", "_", "_"],
+  ["_", "X", "_"],
+  ["O", "O", "X"],
+];
+
 function validateMove(move, board) {
+   
+
+
     // Implement this at the end if you have time, otherwise you can help your teammates!
-    let board = [
-      ["X", "_", "_"],
-      ["_", "X", "_"],
-      ["O", "O", "X"],
-    ];
+   
     return true;
 }
 
