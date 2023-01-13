@@ -16,17 +16,13 @@
         =================
     Test your function by calling it with an example tic-tac-toe board.
 */
-let board = [
-            ['X', '_', '_'],
-            ['_', 'X', '_'],
-            ['O', 'O', 'X']
-        ];
+
 
 export function printBoard(board) {
-    console.log(`[${boardArr[2]}]\n[${boardArr[0]}]\n[${boardArr[1]}]`);
+    
 
 }
-printBoard(board);
+
 
 /*
     Given a tic-tac-toe board (an array of arrays),
