@@ -16,8 +16,17 @@
         ];
 */
 function validateMove(move, board) {
-    // Implement this at the end if you have time, otherwise you can help your teammates!
-    return true;
+  const [x, y] = move.split(",").map((element) => Number(element));
+
+  const validNumbers = [1, 2, 3];
+  if (!validNumbers.includes(x) || !validNumbers.includes(y)) return false;
+
+  if (board[x - 1][y - 1] !== "_") {
+    console.log("Try again...");
+    return false;
+  }
+
+  return true;
 }
 
 /*
@@ -32,5 +41,9 @@ function validateMove(move, board) {
             - Return true
 */
 export function makeMove(board, move, player) {
-    return false;
+  if (!validateMove(move, board)) return false;
+
+  const [x, y] = move.split(",").map((element) => Number(element));
+  board[x - 1][y - 1] = player;
+  return true;
 }

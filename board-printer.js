@@ -16,6 +16,10 @@
     Test your function by calling it with an example tic-tac-toe board.
 */
 export function printBoard(board) {
+  for (let row of board) {
+    console.log(row.join("  |  ").replaceAll("_", " "));
+    console.log("=================");
+  }
 }
 
 /*
@@ -24,4 +28,10 @@ export function printBoard(board) {
         - return false if there are still moves that can be made
 */
 export function checkIfNoMovesLeft(board) {
+  for (let row of board) {
+    for (let element of row) {
+      if (element === "_") return false;
+    }
+  }
+  return true;
 }
