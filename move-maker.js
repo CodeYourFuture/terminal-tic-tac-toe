@@ -17,6 +17,21 @@
 */
 function validateMove(move, board) {
     // Implement this at the end if you have time, otherwise you can help your teammates!
+    let moveArray = move.split(",").map((x) => parseInt(x));
+    if (moveArray.length !== 2) {
+      console.log("Try again...");
+      return false;
+    }
+    let row = moveArray[0] - 1;
+    let col = moveArray[1] - 1;
+    if (row < 0 || row > 2 || col < 0 || col > 2) {
+      console.log("Try again...");
+      return false;
+    }
+    if (board[row][col] !== "_") {
+      console.log("Try again...");
+      return false;
+    }
     return true;
 }
 
@@ -32,5 +47,12 @@ function validateMove(move, board) {
             - Return true
 */
 export function makeMove(board, move, player) {
+    if (validateMove(move, board)) {
+      let moveArray = move.split(",").map((x) => parseInt(x));
+      let row = moveArray[0] - 1;
+      let col = moveArray[1] - 1;
+      board[row][col] = player;
+      return true;
+    }
     return false;
 }
